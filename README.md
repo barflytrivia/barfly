@@ -40,6 +40,6 @@ Barfly is a bar trivia app. Teams form and compete with each other by answering 
    - minus one point for incorrect answer within first 5 seconds
    - no penalty for answering beyond 5 seconds
    - 15 second time limit per question
-
+4. Game API routes for all-time high score, specific game score, all scores
 
 
