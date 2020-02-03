@@ -4,8 +4,9 @@ Barfly is a bar trivia app. Teams form and compete with each other by answering 
 
 ## MVP
 1. OAuth Login 
-2. Join game
-3. Game start
+2. User/team can join game with a game id
+3. Game start/end, length, difficulity managed by a game admin
+4. 
 
 
 ## User Stories
