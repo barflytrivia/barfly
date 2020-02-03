@@ -21,7 +21,7 @@ Barfly is a bar trivia app. Teams form and compete with each other by answering 
 
 ### Admin
 
-1. Start game
+1. Create Game and Start Game
 2. Choose difficulty
 3. Game randomly choose category
 4. Set game length, either time or number of questions
@@ -30,6 +30,14 @@ Barfly is a bar trivia app. Teams form and compete with each other by answering 
 ### Game
 
 1. Game will initiate by generating a game code that teams can join
+2. Game is started by Admin
+3. Game will keep score and determine winner
+3. Game Scoring:
+   - one point for correct answer
+   - one additional point for correct answer within first 5 seconds
+   - minus one point for incorrect answer within first 5 seconds
+   - no penalty for answering beyond 5 seconds
+   - 15 second time limit per question
 
 
 
