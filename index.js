@@ -1,4 +1,4 @@
-const app = require('fastify')({});
+const app = require('fastify')({}); //no options set
 
 app.get('/', function (req, res) {
   res.send('hello world');
