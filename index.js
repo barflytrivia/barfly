@@ -1,7 +1,17 @@
-const app = require('fastify')({});
+'use strict';
 
-app.get('/', function (req, res) {
-  res.send('hello world');
-});
+const server = require('./lib/server.js');
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-app.listen(3000, () => console.log('app is listening on 3000'));
+const mongooseOptions = {
+  useNewUrlParser:true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
+};
+
+mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
+
+server.start(process.env.PORT);
+
+
