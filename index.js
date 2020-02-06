@@ -13,5 +13,3 @@ const mongooseOptions = {
 mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
 
 server.start(process.env.PORT);
-
-
