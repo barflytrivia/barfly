@@ -1,16 +1,15 @@
-// const io = const io = require('socket.io-client');
-const app = require('fastify')({}); //no options set
-const start = require('./lib/player.js');
+'use strict';
 
-app.get('/', function (req, res) {
-  res.send('hello world');
-});
+const server = require('./lib/server.js');
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-app.get('/start', function (req, res) {
-  start();
-  console.log('anything');
-  console.log(start());
-  res.send('hello world');
-});
+const mongooseOptions = {
+  useNewUrlParser:true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+};
 
-app.listen(3000, () => console.log('app is listening on 3000'));
+mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
+
+server.start(process.env.PORT);
