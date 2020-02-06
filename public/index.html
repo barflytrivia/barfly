@@ -14,13 +14,14 @@
 
   <script>
 
-    let URL = "https://github.com/login/oauth/authorize";
+    let URL = "https://accounts.google.com/o/oauth2/v2/auth";
 
     let options = {
-      client_id: '',
+      client_id: '867850787554-fi8f426d3p685fl6pjjt6qb1h8jlv2le.apps.googleusercontent.com',
       redirect_uri: 'http://localhost:3000/oauth',
-      scope: 'read:user',
-      state: '401appconsent'
+      scope: 'email openid profile',
+      prompt: 'consent',
+      response_type: 'code'
     }
 
     let QueryString = Object.keys(options).map((key) => {
@@ -33,7 +34,6 @@
     link.setAttribute('href', authURL);
 
   </script>
-
 
 </body>
 
