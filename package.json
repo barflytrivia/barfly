@@ -4,7 +4,8 @@
   "description": "a fun trivia app for team competition",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "start": "node index.js lib/trivia-server.js"
   },
   "repository": {
     "type": "git",
